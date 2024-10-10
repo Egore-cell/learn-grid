@@ -1,0 +1,84 @@
+body {
+    padding: 50px 100px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item {
+    border: 1px solid #000;
+    padding: 15px;
+    background-color: grey;
+    color: aliceblue;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 200px 150px;
+    /* Устанавливает высоту всех неявных гридов - grid auto rows !! 49 минута */
+    grid-auto-flow: column;
+    /* grid-auto-rows: 125px; */
+    grid-auto-flow: dense;
+    gap: 20px;
+    /* justify-items: end;
+    align-items: center; */
+}
+
+/* чтобы ячейка стала больше span !! */
+
+.item_1 {
+    /* grid-column-start: span 2;
+    grid-row-start: span 2; */
+
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    grid-column: 1/5;
+    grid-row: 1/3;
+}
+
+.item_2 {
+    grid-column: span 2;
+    /* align-self: end; */
+}
+
+.item_7 {
+    grid-column: 2/4;
+}
+
+.item_16 {
+    /* justify-self: center; */
+}
+
+/* .wrapper {
+    display: grid;
+    gird-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "footer footer footer";
+}
+
+.element {
+    border: 1px solid #000;
+    height: 200px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+} */
